@@ -5,7 +5,7 @@ const initState = [{text: 'Task 1'}, {text: 'Task 2'}]
 const todoReducer = (state = initState, action) => {
   switch (action.type) {
     case ADD_TODO:
-      return [...state, action.payload]
+      return [...state, {text:action.payload}]
     default:
       return state
   }
